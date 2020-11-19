@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.tugasnavigation.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_soalFragment"
+            app:destination="@id/soalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/soalFragment"
+        android:name="com.example.tugasnavigation.SoalFragment"
+        android:label="fragment_soal"
+        tools:layout="@layout/fragment_soal" >
+        <action
+            android:id="@+id/action_soalFragment_to_successFragment"
+            app:destination="@id/successFragment" />
+        <action
+            android:id="@+id/action_soalFragment_to_failFragment"
+            app:destination="@id/failFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.example.tugasnavigation.successFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" >
+        <action
+            android:id="@+id/action_successFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/failFragment"
+        android:name="com.example.tugasnavigation.failFragment"
+        android:label="fragment_fail"
+        tools:layout="@layout/fragment_fail" >
+        <action
+            android:id="@+id/action_failFragment_to_soalFragment2"
+            app:destination="@id/soalFragment" />
+    </fragment>
+</navigation>
